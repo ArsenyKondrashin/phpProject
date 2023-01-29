@@ -1,0 +1,11 @@
+{
+    "name": "geekbrains/leveltwo",
+    "autoload": {
+        "psr-4": {
+            "GeekBrains\\LevelTwo\\": "src/"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.20"
+    }
+}
