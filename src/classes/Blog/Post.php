@@ -4,7 +4,7 @@ namespace GeekBrains\LevelTwo\classes\Blog;
 
 class Post
 {
-    private $id;
+    private $uuid;
     private $authorId;
     private $header;
     private $text;
@@ -17,8 +17,8 @@ class Post
      */
     public function __construct($id, $authorId, $header, $text)
     {
-        $this->id = $id;
-        $this->authorId = $authorId->getId();
+        $this->uuid = $id;
+        $this->authorId = $authorId->getUUID();
         $this->header = $header;
         $this->text = $text;
     }
@@ -30,9 +30,9 @@ class Post
     /**
      * @return mixed
      */
-    public function getId()
+    public function getUUID()
     {
-        return $this->id;
+        return $this->uuid;
     }
 
     /**
