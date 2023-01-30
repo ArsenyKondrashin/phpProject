@@ -4,7 +4,7 @@ namespace GeekBrains\LevelTwo\classes\Blog;
 
 class Comment
 {
-    private $id;
+    private $uuid;
     private $authorId;
     private $postId;
     private $text;
@@ -16,9 +16,9 @@ class Comment
      */
     public function __construct($id, $authorId, $postId, $text)
     {
-        $this->id = $id;
-        $this->authorId = $authorId->getId();
-        $this->postId = $postId->getId();
+        $this->uuid = $id;
+        $this->authorId = $authorId->getUUID();
+        $this->postId = $postId->getUUID();
         $this->text = $text;
     }
 
@@ -29,9 +29,9 @@ class Comment
     /**
      * @return mixed
      */
-    public function getId()
+    public function getUUID()
     {
-        return $this->id;
+        return $this->uuid;
     }
 
     /**
@@ -48,6 +48,14 @@ class Comment
     public function getPostId()
     {
         return $this->postId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getText()
+    {
+        return $this->text;
     }
 
 }

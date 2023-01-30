@@ -4,39 +4,52 @@ namespace GeekBrains\LevelTwo\classes\Person;
 
 class User
 {
-    private $id;
-    private $name;
+    private $uuid;
+    private $firstname;
+    private $lastname;
 
 
     /**
      * @param $id
-     * @param $name
-     * @param $surname
+     * @param $firstname
+     * @param $lastname
      */
-    public function __construct($id, $name)
+    public function __construct($id, $firstname, $lastname)
     {
-        $this->id = $id;
-        $this->name = $name;
+        $this->uuid = $id;
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
 
     }
     public function __toString() {
-        return "Имя пользователя: " . $this->getName();
+        return "Имя пользователя: " . $this->getFirstname() . $this->getLastname() . 'ID: ' . $this->uuid;
     }
     /**
      * @return mixed
      */
-    public function getId()
+    public function getUUID()
     {
-        return $this->id;
+        return $this->uuid;
     }
 
     /**
      * @return mixed
      */
-    public function getName()
+    public function getFirstname()
     {
-        return $this->name;
+        return $this->firstname;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+
+
 
 
 }
